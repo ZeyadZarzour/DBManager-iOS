@@ -15,6 +15,11 @@
 		F239CC181EC9E3A100BA741E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F239CC161EC9E3A100BA741E /* LaunchScreen.storyboard */; };
 		F239CC231EC9E3A100BA741E /* SQLite3DBSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F239CC221EC9E3A100BA741E /* SQLite3DBSampleTests.m */; };
 		F239CC2E1EC9E3A100BA741E /* SQLite3DBSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F239CC2D1EC9E3A100BA741E /* SQLite3DBSampleUITests.m */; };
+		F239CC3D1EC9E45100BA741E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F239CC3C1EC9E45100BA741E /* libsqlite3.tbd */; };
+		F239CC3F1EC9E49900BA741E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F239CC3E1EC9E49900BA741E /* libsqlite3.dylib */; };
+		F239CC421EC9E51A00BA741E /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F239CC411EC9E51A00BA741E /* DBManager.m */; };
+		F239CC441ECA0CFE00BA741E /* sampledb.sql in Resources */ = {isa = PBXBuildFile; fileRef = F239CC431ECA0CFE00BA741E /* sampledb.sql */; };
+		F239CC471ECB1C1000BA741E /* EditInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F239CC461ECB1C1000BA741E /* EditInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,13 @@
 		F239CC291EC9E3A100BA741E /* SQLite3DBSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SQLite3DBSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F239CC2D1EC9E3A100BA741E /* SQLite3DBSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLite3DBSampleUITests.m; sourceTree = "<group>"; };
 		F239CC2F1EC9E3A100BA741E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F239CC3C1EC9E45100BA741E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		F239CC3E1EC9E49900BA741E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
+		F239CC401EC9E51A00BA741E /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBManager.h; path = ../DBManager.h; sourceTree = "<group>"; };
+		F239CC411EC9E51A00BA741E /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBManager.m; path = ../DBManager.m; sourceTree = "<group>"; };
+		F239CC431ECA0CFE00BA741E /* sampledb.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = sampledb.sql; sourceTree = "<group>"; };
+		F239CC451ECB1C1000BA741E /* EditInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditInfoViewController.h; sourceTree = "<group>"; };
+		F239CC461ECB1C1000BA741E /* EditInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F239CC3F1EC9E49900BA741E /* libsqlite3.dylib in Frameworks */,
+				F239CC3D1EC9E45100BA741E /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +95,12 @@
 		F239CBFC1EC9E3A100BA741E = {
 			isa = PBXGroup;
 			children = (
+				F239CC431ECA0CFE00BA741E /* sampledb.sql */,
 				F239CC071EC9E3A100BA741E /* SQLite3DBSample */,
 				F239CC211EC9E3A100BA741E /* SQLite3DBSampleTests */,
 				F239CC2C1EC9E3A100BA741E /* SQLite3DBSampleUITests */,
 				F239CC061EC9E3A100BA741E /* Products */,
+				F239CC3B1EC9E45100BA741E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +117,15 @@
 		F239CC071EC9E3A100BA741E /* SQLite3DBSample */ = {
 			isa = PBXGroup;
 			children = (
+				F239CC401EC9E51A00BA741E /* DBManager.h */,
+				F239CC411EC9E51A00BA741E /* DBManager.m */,
 				F239CC0B1EC9E3A100BA741E /* AppDelegate.h */,
 				F239CC0C1EC9E3A100BA741E /* AppDelegate.m */,
 				F239CC0E1EC9E3A100BA741E /* ViewController.h */,
 				F239CC0F1EC9E3A100BA741E /* ViewController.m */,
 				F239CC111EC9E3A100BA741E /* Main.storyboard */,
+				F239CC451ECB1C1000BA741E /* EditInfoViewController.h */,
+				F239CC461ECB1C1000BA741E /* EditInfoViewController.m */,
 				F239CC141EC9E3A100BA741E /* Assets.xcassets */,
 				F239CC161EC9E3A100BA741E /* LaunchScreen.storyboard */,
 				F239CC191EC9E3A100BA741E /* Info.plist */,
@@ -138,6 +158,15 @@
 				F239CC2F1EC9E3A100BA741E /* Info.plist */,
 			);
 			path = SQLite3DBSampleUITests;
+			sourceTree = "<group>";
+		};
+		F239CC3B1EC9E45100BA741E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F239CC3E1EC9E49900BA741E /* libsqlite3.dylib */,
+				F239CC3C1EC9E45100BA741E /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +277,7 @@
 			files = (
 				F239CC181EC9E3A100BA741E /* LaunchScreen.storyboard in Resources */,
 				F239CC151EC9E3A100BA741E /* Assets.xcassets in Resources */,
+				F239CC441ECA0CFE00BA741E /* sampledb.sql in Resources */,
 				F239CC131EC9E3A100BA741E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,9 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F239CC471ECB1C1000BA741E /* EditInfoViewController.m in Sources */,
 				F239CC101EC9E3A100BA741E /* ViewController.m in Sources */,
 				F239CC0D1EC9E3A100BA741E /* AppDelegate.m in Sources */,
 				F239CC0A1EC9E3A100BA741E /* main.m in Sources */,
+				F239CC421EC9E51A00BA741E /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SQLite3DBSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Radbonus.SQLite3DBSample;
@@ -435,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SQLite3DBSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Radbonus.SQLite3DBSample;
